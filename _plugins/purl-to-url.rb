@@ -15,7 +15,7 @@ class PurlToUrl
   def build_rpm_url(purl)
     # TODO: namespace = amzn/centos/redhat is not covered
     if purl.namespace == 'fedora'
-      "https://packages.fedoraproject.org/pkgs/#{purl.name}/"
+      return "https://packages.fedoraproject.org/pkgs/#{purl.name}/"
     end
     # not a distro package
     if (!purl.namespace) && purl.qualifiers['repository_url']
